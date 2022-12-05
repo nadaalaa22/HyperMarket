@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  background-color: #C7C5F4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #dfdded;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #776BCC;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #302e31;
+}
+
+a {
+  color: #000000;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: rgb(67, 67, 67);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <!-- <h3>Billing Address</h3> -->
+            <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+  <html> 
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style> 
+body { 
+  font-family: "Lato", sans-serif; 
+} 
+ 
+.sidenav { 
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0; 
+  background-color: #111; 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  padding-top: 60px; 
+} 
+ 
+.sidenav a { 
+  padding: 8px 8px 8px 32px; 
+  text-decoration: none; 
+  font-size: 25px; 
+  color: #818181; 
+  display: block; 
+  transition: 0.3s; 
+} 
+ 
+.sidenav a:hover { 
+  color: #f1f1f1; 
+} 
+ 
+.sidenav .closebtn { 
+  position: absolute; 
+  top: 0; 
+  right: 25px; 
+  font-size: 36px; 
+  margin-left: 50px; 
+} 
+ 
+@media screen and (max-height: 450px) { 
+  .sidenav {padding-top: 15px;} 
+  .sidenav a {font-size: 18px;} 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<div id="mySidenav" class="sidenav"> 
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+  <a href="#">Nora Fawzy</a> 
+  <a href="#">ID : 321 </a> 
+  <a href="#">Log out </a> 
+  
+</div> 
+ 
+ 
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span> 
+ 
+<script> 
+function openNav() { 
+  document.getElementById("mySidenav").style.width = "250px"; 
+} 
+ 
+function closeNav() { 
+  document.getElementById("mySidenav").style.width = "0"; 
+} 
+</script> 
+    
+</body> 
+</html>
+
+<h3>Search for item</h3>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<ul id="myUL">
+  <li><a href="#">Shampoo</a></li>
+  <li><a href="#">Milk</a></li>
+
+  <li><a href="#">Cheese</a></li>
+  <li><a href="#">Chips</a></li>
+
+  <li><a href="#">Choclate</a></li>
+  <li><a href="#">KitKat</a></li>
+  <li><a href="#">Nodels</a></li>
+
+  <li><a href="#">Domty</a></li>
+  <li><a href="#">Wipes</a></li>
+  <li><a href="#">Meat</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+
+           
+            <div class="row">
+             
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+             
+            </div>
+          </div>
+          
+        </div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+        <input type="submit" value="Print recepit" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Reciept <span class="price" style="color:black"> <i class="fa fa-shopping-cart"></i> <b>8</b></span></h4>
+      <p><a>Shampoo </a> <span class="price">$15</span></p>
+      <p><a>Wipes </a> <span class="price">$5</span></p>
+      <p><a>KitKat </a> <span class="price">$20</span></p>
+      <p><a>Chips</a> <span class="price">$3</span></p>
+      <p><a>Milk </a> <span class="price">$5</span></p>
+      <p><a>Nodels </a> <span class="price">$4</span></p>
+      <p><a>Domty</a> <span class="price">$6</span></p>
+      <p><a>Meat</a> <span class="price">$30</span></p>
+      <hr>
+      <p>Points <span class="price" style="color:black"><b>0</b></span></p>
+      <p>Total <span class="price" style="color:black"><b>$88</b></span></p>
+      <p>After discount <span class="price" style="color:black"><b>$70</b></span></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
